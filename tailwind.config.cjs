@@ -6,6 +6,9 @@ module.exports = {
       maxWidth: {
         container: '1200px',
       },
+      fontFamily: {
+        dm: ['DM Sans', 'sans-serif'],
+      },
     },
   },
   plugins: [],
