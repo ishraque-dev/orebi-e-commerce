@@ -1,6 +1,8 @@
 import { FaBars } from 'react-icons/fa';
+import { AiOutlineCloseCircle } from 'react-icons/ai';
 export const icons = {
   bar: FaBars,
+  close: AiOutlineCloseCircle,
 };
 
 export const links = [

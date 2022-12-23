@@ -9,6 +9,17 @@ module.exports = {
       fontFamily: {
         dm: ['DM Sans', 'sans-serif'],
       },
+      screens: {
+        tablet: '640px',
+        // => @media (min-width: 640px) { ... }
+        mobile: '414px',
+        xs_mobile: '375px',
+        laptop: '1024px',
+        // => @media (min-width: 1024px) { ... }
+
+        desktop: '1280px',
+        // => @media (min-width: 1280px) { ... }
+      },
     },
   },
   plugins: [],
