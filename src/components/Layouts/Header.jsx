@@ -8,6 +8,7 @@ const Header = () => {
   return (
     <div className="max-w-container mx-auto">
       <NavBar logo={logo} Image={Image} navItems={navItems} />
+      <h2>This is the Header!</h2>
     </div>
   );
 };
