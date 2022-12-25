@@ -7,7 +7,7 @@ const NavBar = ({ logo, Image, navItems }) => {
   const location = useLocation();
   const [activeMenu, setActiveMenu] = useWindowResize();
   const [open, setOpen] = useState(false);
-  console.log(activeMenu);
+
   return (
     <div className="navbar lg:flex md:flex py-7 md:px-5 sm:px-5 mobile:px-5 xs_mobile:px-5 font-dm">
       <div className="header_logo ">
