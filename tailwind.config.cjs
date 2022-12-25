@@ -9,6 +9,12 @@ module.exports = {
       fontFamily: {
         dm: ['DM Sans', 'sans-serif'],
       },
+      spacing: {
+        header_padding: '103px',
+      },
+      colors: {
+        'primary-black': '#262626',
+      },
       screens: {
         tablet: '640px',
         // => @media (min-width: 640px) { ... }
