@@ -23,26 +23,27 @@ const Header = () => {
     'Bags',
     'Home appliances',
   ];
+
   return (
     <div className="font-dm ">
-      <div className="max-w-container mx-auto ">
+      <div className="mx-auto max-w-container">
         <NavBar logo={logo} Image={Image} navItems={navItems} />
       </div>
-      <div className="flex justify-between items-center py-5 px-5 lg:px-header_padding flex-wrap bg-[#F5F5F3] w-full">
+      <div className="flex w-full flex-wrap items-center justify-between bg-[#F5F5F3] py-5 px-5 lg:px-header_padding">
         <div
-          className="flex items-center gap-3 toggle"
+          className="toggle flex items-center gap-3"
           onClick={() => {
             setOnTarget(!onTarget);
           }}
         >
           <icons.catBar className="cursor-pointer " />
-          <Dropdown className="flex flex-col dropdown relative w-64">
+          <Dropdown className="dropdown relative flex w-64 flex-col">
             <p className="cursor-pointer">
               {currentCatItem || 'Shop by Category'}
             </p>
             {onTarget && (
               <motion.div
-                className="absolute top-7 bg-primary-black w-full  rounded-sm p-2 text-white"
+                className="absolute top-7 w-full rounded-sm bg-primary-black p-2 text-white"
                 initial="hidden"
                 animate="visible"
                 variants={dropDivAnimVariants}
@@ -52,7 +53,7 @@ const Header = () => {
                     return (
                       <MotionLI
                         key={i}
-                        className={`list-none cursor-pointer text-gray-300 hover:text-white ${
+                        className={`cursor-pointer list-none text-gray-300 hover:text-white ${
                           item === arr.slice(-1).join('')
                             ? 'border-none'
                             : 'border-b border-[#2d2d2d]'
