@@ -11,7 +11,9 @@ import { Dropdown, MotionUL, MotionLI } from '../../components';
 import useDomElement from '../../hooks/useDomElement';
 import { motion } from 'framer-motion';
 const Header = () => {
-  const [currentCatItem, setCurrentCatItem] = useState(null);
+  const [currentCatItem, setCurrentCatItem] = useState('');
+  const [onTarget, setOnTarget] = useDomElement();
+
   // This will be replaced
   const category = [
     'Accesories',
@@ -21,7 +23,6 @@ const Header = () => {
     'Bags',
     'Home appliances',
   ];
-  const [onTarget, setOnTarget] = useDomElement();
   return (
     <div className="font-dm ">
       <div className="max-w-container mx-auto ">
@@ -30,7 +31,9 @@ const Header = () => {
       <div className="flex justify-between items-center py-5 px-5 lg:px-header_padding flex-wrap bg-[#F5F5F3] w-full">
         <div
           className="flex items-center gap-3 toggle"
-          onClick={() => setOnTarget(!onTarget)}
+          onClick={() => {
+            setOnTarget(!onTarget);
+          }}
         >
           <icons.catBar className="cursor-pointer " />
           <Dropdown className="flex flex-col dropdown relative w-64">
@@ -39,15 +42,16 @@ const Header = () => {
             </p>
             {onTarget && (
               <motion.div
-                className="absolute top-7 bg-primary-black w-full h-72 rounded-sm p-2 text-white"
+                className="absolute top-7 bg-primary-black w-full  rounded-sm p-2 text-white"
                 initial="hidden"
                 animate="visible"
                 variants={dropDivAnimVariants}
               >
-                {category.map((item, _, arr) => {
-                  return (
-                    <MotionUL variants={dropUlAnimVariant}>
+                <MotionUL variants={dropUlAnimVariant}>
+                  {category.map((item, i, arr) => {
+                    return (
                       <MotionLI
+                        key={i}
                         className={`list-none cursor-pointer text-gray-300 hover:text-white ${
                           item === arr.slice(-1).join('')
                             ? 'border-none'
@@ -59,9 +63,9 @@ const Header = () => {
                       >
                         {item}
                       </MotionLI>
-                    </MotionUL>
-                  );
-                })}
+                    );
+                  })}
+                </MotionUL>
               </motion.div>
             )}
           </Dropdown>
@@ -74,3 +78,4 @@ const Header = () => {
 };
 
 export default Header;
+// Coded by ishraque

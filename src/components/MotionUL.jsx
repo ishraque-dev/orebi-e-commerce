@@ -2,14 +2,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 const MotionUL = ({ className, variants, children }) => {
   return (
-    <motion.div
-      initial="hidden"
+    <motion.ul
+      initial="hden"
       animate="visible"
       className={className}
       variants={variants}
     >
       {children}
-    </motion.div>
+    </motion.ul>
   );
 };
 
