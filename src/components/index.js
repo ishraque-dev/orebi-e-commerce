@@ -6,6 +6,8 @@ import MainNavigation from './MainNavigation';
 import Dropdown from './Dropdown';
 import MotionUL from './MotionUL';
 import MotionLI from './MotionLI';
+import Search from './Search';
+import Input from './Input';
 export {
   Header,
   Image,
@@ -15,4 +17,6 @@ export {
   Dropdown,
   MotionUL,
   MotionLI,
+  Search,
+  Input,
 };

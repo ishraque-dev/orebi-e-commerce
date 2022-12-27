@@ -1,10 +1,12 @@
 import { FaBars } from 'react-icons/fa';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { RiBarChartHorizontalLine } from 'react-icons/ri';
+import { FiSearch } from 'react-icons/fi';
 export const icons = {
   bar: FaBars,
   close: AiOutlineCloseCircle,
   catBar: RiBarChartHorizontalLine,
+  search: FiSearch,
 };
 
 export const links = [
@@ -13,6 +15,15 @@ export const links = [
   { name: 'About', to: '/about' },
   { name: 'Contact', to: '/contact' },
   { name: 'Journal', to: '/journal' },
+];
+export const category = [
+  'All',
+  'Accesories',
+  'Furniture',
+  'Electronics',
+  'Clothes',
+  'Bags',
+  'Home appliances',
 ];
 export const dropdownAnimationVariants = {
   visible: { opacity: 1 },
