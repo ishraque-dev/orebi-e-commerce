@@ -1,4 +1,5 @@
 import { category as list } from '../assets/constants';
+
 const keyPressReducer = (state, action) => {
   switch (action.type) {
     case 'arrowUp':

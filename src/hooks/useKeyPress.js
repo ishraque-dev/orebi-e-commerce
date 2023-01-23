@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+
 const useKeyPress = (targetKey) => {
   const [keyPress, setKeyPressed] = useState(false);
   useEffect(() => {
@@ -19,4 +20,5 @@ const useKeyPress = (targetKey) => {
   }, [targetKey]);
   return keyPress;
 };
+
 export default useKeyPress;

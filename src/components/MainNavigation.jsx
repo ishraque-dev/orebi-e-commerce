@@ -1,11 +1,8 @@
 import React from 'react';
 import { Header } from '../components';
+
 const MainNavigation = () => {
-  return (
-    <>
-      <Header />
-    </>
-  );
+  return <Header />;
 };
 
 export default MainNavigation;

@@ -1,19 +1,46 @@
 import { useEffect, useState } from 'react';
 
-export default function useDomElement() {
+export default function useDomElement(target) {
   const [onTarget, setOnTarget] = useState(false);
+  const [onTarget2, setOnTarget2] = useState(false);
+  const [onTarget3, setOnTarget3] = useState(false);
+  const controller = function (stateChange, value = false) {
+    // eslint-disable-next-line no-undef
+    document.body.addEventListener('click', (e) => {
+      if (e.target.closest('.toggle') === null) {
+        stateChange(value);
+      }
+    });
+  };
   useEffect(() => {
     const handleClick = () => {
-      document.body.addEventListener('click', function (e) {
-        if (e.target.closest('.toggle') === null) {
-          setOnTarget(false);
-        }
-      });
+      if (target === 'category') {
+        controller(setOnTarget, false);
+      }
+
+      if (target === 'user') {
+        controller(setOnTarget2, false);
+      }
+      if (target === 'cart') {
+        controller(setOnTarget3, false);
+      }
     };
     handleClick();
     return () =>
-      document.removeEventListener('click', () => setOnTarget(false));
+      document.removeEventListener('click', () => {
+        setOnTarget(false);
+        setOnTarget2(false);
+        setOnTarget3(false);
+      });
   }, []);
 
-  return [onTarget, setOnTarget];
+  if (target === 'category') {
+    return [onTarget, setOnTarget];
+  }
+  if (target === 'user') {
+    return [onTarget2, setOnTarget2];
+  }
+  if (target === 'cart') {
+    return [onTarget3, setOnTarget3];
+  }
 }

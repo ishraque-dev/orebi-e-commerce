@@ -1,12 +1,19 @@
 import { FaBars } from 'react-icons/fa';
-import { AiOutlineCloseCircle } from 'react-icons/ai';
+import { AiOutlineCloseCircle, AiOutlineShoppingCart } from 'react-icons/ai';
 import { RiBarChartHorizontalLine } from 'react-icons/ri';
 import { FiSearch } from 'react-icons/fi';
+import { BiUser } from 'react-icons/bi';
+import { RxTriangleDown, RxTriangleUp } from 'react-icons/rx';
+
 export const icons = {
   bar: FaBars,
   close: AiOutlineCloseCircle,
   catBar: RiBarChartHorizontalLine,
   search: FiSearch,
+  user: BiUser,
+  angleUp: RxTriangleUp,
+  angleDown: RxTriangleDown,
+  cart: AiOutlineShoppingCart,
 };
 
 export const links = [

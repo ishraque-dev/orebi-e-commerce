@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-const MotionUL = ({ className, variants, children }) => {
+
+function MotionUL({ className, variants, children }) {
   return (
     <motion.ul
       initial="hidden"
@@ -11,6 +12,6 @@ const MotionUL = ({ className, variants, children }) => {
       {children}
     </motion.ul>
   );
-};
+}
 
 export default MotionUL;

@@ -1,7 +1,9 @@
-import React from 'react';
-import { dropdownLiAnimVariant } from '../assets/constants';
+import React, { useRef, useEffect } from 'react';
+
 import { motion } from 'framer-motion';
-const MotionLI = ({
+import { dropdownLiAnimVariant } from '../assets/constants';
+
+function MotionLI({
   children,
   className,
   onClick,
@@ -10,9 +12,10 @@ const MotionLI = ({
   ariaPressed,
   tabIndex,
   onKeyPress,
-}) => {
+  // LiRef,
+}) {
   return (
-    <motion.li
+    <motion.div
       className={className}
       onClick={onClick}
       variants={dropdownLiAnimVariant}
@@ -22,10 +25,11 @@ const MotionLI = ({
       aria-pressed={ariaPressed}
       tabIndex={tabIndex}
       onKeyPress={onKeyPress}
+      // ref={LiRef}
     >
       {children}
-    </motion.li>
+    </motion.div>
   );
-};
+}
 
 export default MotionLI;

@@ -8,6 +8,7 @@ import MotionUL from './MotionUL';
 import MotionLI from './MotionLI';
 import Search from './Search';
 import Input from './Input';
+import Button from './Button';
 export {
   Header,
   Image,
@@ -19,4 +20,5 @@ export {
   MotionLI,
   Search,
   Input,
+  Button,
 };

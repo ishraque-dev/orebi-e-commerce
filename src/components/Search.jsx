@@ -1,12 +1,13 @@
 import React from 'react';
 import Input from './Input';
-const Search = () => {
+
+function Search() {
   return (
     <Input
-      input={{ name: 'search', type: 'text', placeholder: 'Search hear' }}
+      input={{ name: 'search', type: 'text', placeholder: 'Search here' }}
       className="w-full border-none py-2 px-3 outline-none"
     />
   );
-};
+}
 
 export default Search;
