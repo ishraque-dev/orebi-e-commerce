@@ -1,19 +1,29 @@
 import { FaBars } from 'react-icons/fa';
-import { AiOutlineCloseCircle, AiOutlineShoppingCart } from 'react-icons/ai';
+import {
+  AiOutlineCloseCircle,
+  AiOutlineShoppingCart,
+  AiOutlineClose,
+} from 'react-icons/ai';
 import { RiBarChartHorizontalLine } from 'react-icons/ri';
 import { FiSearch } from 'react-icons/fi';
 import { BiUser } from 'react-icons/bi';
 import { RxTriangleDown, RxTriangleUp } from 'react-icons/rx';
+import headset from '../../public/imgs/headset.png';
+import banner from '../../public/imgs/banner.png';
 
+export const images = {
+  headset,
+  banner,
+};
 export const icons = {
   bar: FaBars,
-  close: AiOutlineCloseCircle,
   catBar: RiBarChartHorizontalLine,
   search: FiSearch,
   user: BiUser,
   angleUp: RxTriangleUp,
   angleDown: RxTriangleDown,
   cart: AiOutlineShoppingCart,
+  close: AiOutlineClose,
 };
 
 export const links = [

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useReducer } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { logo } from '../../assets';
 import {
@@ -7,6 +8,7 @@ import {
   dropdownAnimationVariants as dropDivAnimVariants,
   dropUlAnimVariant,
   category,
+  images,
 } from '../../assets/constants';
 // eslint-disable-next-line import/no-cycle
 import {
@@ -17,6 +19,7 @@ import {
   MotionLI,
   Search,
   Button,
+  DropCartItem,
 } from '../index.js';
 
 import useDomElement from '../../hooks/useDomElement';
@@ -46,13 +49,26 @@ function Header() {
 
   // This will be replaced
   // const inputReference = useRef(null);
-
+  useEffect(() => {
+    if (onTarget) {
+      setOnTarget2(false);
+      setOnTarget3(false);
+    }
+    if (onTarget2) {
+      setOnTarget(false);
+      setOnTarget3(false);
+    }
+    if (onTarget3) {
+      setOnTarget(false);
+      setOnTarget2(false);
+    }
+  }, [onTarget, onTarget2, onTarget3]);
   return (
     <div className="font-dm ">
       <div className="mx-auto max-w-container">
         <NavBar logo={logo} Image={Image} navItems={navItems} />
       </div>
-      <div className="flex w-full flex-wrap items-center justify-between bg-[#F5F5F3] py-5 px-5 lg:px-header_padding">
+      <div className="flex w-full items-center justify-between bg-[#F5F5F3] py-5 px-5 lg:flex-wrap lg:px-header_padding">
         <div
           className="toggle flex  items-center gap-3"
           onClick={() => {
@@ -61,7 +77,7 @@ function Header() {
         >
           <icons.catBar className="cursor-pointer " />
           <Dropdown className="dropdown relative flex flex-col">
-            <p className="cursor-pointer">
+            <p className="hidden cursor-pointer lg:inline-block">
               {currentCatItem || 'Shop by Category'}
             </p>
             {onTarget && (
@@ -103,47 +119,85 @@ function Header() {
             )}
           </Dropdown>
         </div>
-        <div className=" flex w-96 items-center">
+        <div className="flex w-auto items-center tablet:w-80 lg:w-96">
           <Search />
           <div className="relative flex items-center ">
             {' '}
             <icons.search className="absolute right-2 rounded-full" />
           </div>
         </div>
-        <div className="toggle relative flex w-44 ">
-          <icons.user
+        <div className="toggle relative z-10 flex  gap-5">
+          <div
+            className="flex "
             onClick={() => {
               setOnTarget2(!onTarget2);
             }}
-          />
-          {!onTarget2 && (
-            <icons.angleDown
-              onClick={() => {
-                setOnTarget2(!onTarget2);
-              }}
-            />
-          )}
-          {onTarget2 && <icons.angleUp />}
+          >
+            <icons.user className="text-lg" />
+            {/* <icons.angleDown /> */}
+            {!onTarget2 ? (
+              <icons.angleDown className="text-lg" />
+            ) : (
+              <icons.angleUp className="text-lg" />
+            )}
+            {/* {onTarget2 && <icons.angleUp />} */}
+          </div>
           {onTarget2 && (
-            <Dropdown className="absolute right-20 top-5 h-24 w-48">
-              <Button className="w-full bg-primary-black py-3 px-2  text-white">
-                My Account
-              </Button>
-              <Button className="w-full bg-slate-200 py-3 px-2  text-black">
-                Logout
-              </Button>
-            </Dropdown>
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={dropDivAnimVariants}
+            >
+              <Dropdown className="absolute right-20 top-5 h-24 w-48">
+                <Button className="w-full bg-primary-black py-3 px-2  text-white">
+                  My Account
+                </Button>
+                <Button className="w-full bg-slate-200 py-3 px-2  text-black">
+                  Logout
+                </Button>
+              </Dropdown>
+            </motion.div>
           )}
           <icons.cart
+            className="text-lg"
             onClick={() => {
               setOnTarget3(!onTarget3);
             }}
           />
           {onTarget3 && (
-            <Dropdown className="w-88 absolute top-5 w-64 bg-black">
-              <div>Top</div>
-              <div>Bottom</div>
-            </Dropdown>
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={dropDivAnimVariants}
+            >
+              <Dropdown className="absolute top-5 -left-20 w-72">
+                <DropCartItem
+                  image={images.headset}
+                  icons={icons}
+                  Button={Button}
+                />
+                <div className="bg-[#F0F0F0]">
+                  <div className="py-2">
+                    <p className="px-3 text-[#767676]">
+                      Subtotal:
+                      <strong className="ml-1 text-black">$44.44</strong>
+                    </p>
+                  </div>
+                  <div className="flex justify-around gap-4 p-3">
+                    <Link to="/cart">
+                      <Button className="w-full bg-slate-200 py-3 px-2  text-black">
+                        View Cart
+                      </Button>
+                    </Link>
+                    <Link to="/checkout">
+                      <Button className="w-full bg-primary-black py-3 px-2  text-white">
+                        Checkout
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              </Dropdown>
+            </motion.div>
           )}
         </div>
       </div>

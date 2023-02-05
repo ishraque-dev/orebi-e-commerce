@@ -9,6 +9,8 @@ import MotionLI from './MotionLI';
 import Search from './Search';
 import Input from './Input';
 import Button from './Button';
+import DropCartItem from './DropCartItem';
+import Banner from './Layouts/Banner';
 export {
   Header,
   Image,
@@ -21,4 +23,6 @@ export {
   Search,
   Input,
   Button,
+  DropCartItem,
+  Banner,
 };

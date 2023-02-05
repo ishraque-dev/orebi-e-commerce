@@ -15,6 +15,7 @@ export default function useDomElement(target) {
   useEffect(() => {
     const handleClick = () => {
       if (target === 'category') {
+        console.log(target);
         controller(setOnTarget, false);
       }
 
@@ -27,6 +28,7 @@ export default function useDomElement(target) {
     };
     handleClick();
     return () =>
+      // eslint-disable-next-line no-undef
       document.removeEventListener('click', () => {
         setOnTarget(false);
         setOnTarget2(false);
