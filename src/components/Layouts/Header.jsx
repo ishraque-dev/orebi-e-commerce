@@ -76,7 +76,7 @@ function Header() {
           }}
         >
           <icons.catBar className="cursor-pointer " />
-          <Dropdown className="dropdown relative flex flex-col">
+          <Dropdown className="dropdown relative z-50 flex flex-col">
             <p className="hidden cursor-pointer lg:inline-block">
               {currentCatItem || 'Shop by Category'}
             </p>

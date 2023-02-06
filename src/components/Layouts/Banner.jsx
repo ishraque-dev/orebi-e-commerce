@@ -49,6 +49,14 @@ export default function Banner({ Image }) {
         0{i + 1}
       </div>
     ),
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          dots: false,
+        },
+      },
+    ],
   };
   return (
     <Slider {...settings}>

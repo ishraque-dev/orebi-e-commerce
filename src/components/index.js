@@ -11,6 +11,7 @@ import Input from './Input';
 import Button from './Button';
 import DropCartItem from './DropCartItem';
 import Banner from './Layouts/Banner';
+import HomeService from './Layouts/HomeService';
 export {
   Header,
   Image,
@@ -25,4 +26,5 @@ export {
   Button,
   DropCartItem,
   Banner,
+  HomeService,
 };

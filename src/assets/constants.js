@@ -4,8 +4,9 @@ import {
   AiOutlineShoppingCart,
   AiOutlineClose,
 } from 'react-icons/ai';
-import { RiBarChartHorizontalLine } from 'react-icons/ri';
-import { FiSearch } from 'react-icons/fi';
+
+import { RiBarChartHorizontalLine, RiNumber2 } from 'react-icons/ri';
+import { FiSearch, FiTruck, FiRefreshCcw } from 'react-icons/fi';
 import { BiUser } from 'react-icons/bi';
 import { RxTriangleDown, RxTriangleUp } from 'react-icons/rx';
 import headset from '../../public/imgs/headset.png';
@@ -24,6 +25,9 @@ export const icons = {
   angleDown: RxTriangleDown,
   cart: AiOutlineShoppingCart,
   close: AiOutlineClose,
+  number2: RiNumber2,
+  truck: FiTruck,
+  return: FiRefreshCcw,
 };
 
 export const links = [
