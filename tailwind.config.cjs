@@ -15,6 +15,11 @@ module.exports = {
       colors: {
         'primary-black': '#262626',
       },
+      boxShadow: {
+        customShadow:
+          '0 1px 3px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 6%), 0 0 2px rgb(0 0 0 / 7%);',
+      },
+
       screens: {
         tablet: '640px',
         // => @media (min-width: 640px) { ... }

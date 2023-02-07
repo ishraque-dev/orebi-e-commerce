@@ -1,12 +1,19 @@
 import React from 'react';
-import { HomeService } from '../components';
-import { Banner, Image } from '../components/index';
+import {
+  NewArrivals,
+  HomeService,
+  Banner,
+  Image,
+  Advertise,
+} from '../components';
 
 export default function Home() {
   return (
     <div>
       <Banner Image={Image} />
       <HomeService />
+      <Advertise />
+      <NewArrivals />
     </div>
   );
 }

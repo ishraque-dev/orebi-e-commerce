@@ -12,7 +12,16 @@ import Button from './Button';
 import DropCartItem from './DropCartItem';
 import Banner from './Layouts/Banner';
 import HomeService from './Layouts/HomeService';
+import Advertise from './Layouts/Advertise';
+import NewArrivals from './Layouts/NewArrivals';
+import Heading from './Heading';
+import Product from './Product';
+import Badge from './Badge';
 export {
+  Badge,
+  Product,
+  NewArrivals,
+  Heading,
   Header,
   Image,
   NavBar,
@@ -27,4 +36,5 @@ export {
   DropCartItem,
   Banner,
   HomeService,
+  Advertise,
 };

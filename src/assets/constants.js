@@ -3,20 +3,29 @@ import {
   AiOutlineCloseCircle,
   AiOutlineShoppingCart,
   AiOutlineClose,
+  AiOutlineHeart,
 } from 'react-icons/ai';
 
 import { RiBarChartHorizontalLine, RiNumber2 } from 'react-icons/ri';
 import { FiSearch, FiTruck, FiRefreshCcw } from 'react-icons/fi';
 import { BiUser } from 'react-icons/bi';
 import { RxTriangleDown, RxTriangleUp } from 'react-icons/rx';
-import headset from '../../public/imgs/headset.png';
-import banner from '../../public/imgs/banner.png';
-
+import headset from '/imgs/headset.png';
+import banner from '/imgs/banner.png';
+import ad_1 from '/imgs/ad_1.png';
+import ad_2 from '/imgs/ad_2.png';
+import ad_3 from '/imgs/ad_3.png';
+import product from '/imgs/product.png';
 export const images = {
+  product,
   headset,
   banner,
+  ad_1,
+  ad_2,
+  ad_3,
 };
 export const icons = {
+  heart:AiOutlineHeart,
   bar: FaBars,
   catBar: RiBarChartHorizontalLine,
   search: FiSearch,
