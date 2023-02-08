@@ -1,24 +1,12 @@
+import React from 'react';
 import { Heading, Product } from '../index';
 import { images } from '../../assets/constants';
-import Slider from 'react-slick';
-import { SampleNextArrow, SamplePrevArrow } from '../../utils/slick-slider';
-import useWindowResize from '../../hooks/useWindowResize';
-function NewArrivals() {
-  const [activeMenu] = useWindowResize();
-  let slide = activeMenu ? 4 : 2;
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: slide,
-    slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-  };
+function Offers() {
   return (
-    <div className="mx-auto max-w-container ">
-      <Heading title="New Arrivals" />
-      <Slider {...settings}>
+    <div className="mx-auto mb-5 mt-10 max-w-container">
+      <Heading title="Special Offers" />
+
+      <div className="mt-5 flex">
         <div className="mx-w-[370px]">
           <Product image={images.product} badge={true} badgeSlag="New" />
         </div>
@@ -34,9 +22,9 @@ function NewArrivals() {
         <div className="mx-w-[370px]">
           <Product image={images.product} badge={true} badgeSlag="New" />
         </div>
-      </Slider>
+      </div>
     </div>
   );
 }
 
-export default NewArrivals;
+export default Offers;

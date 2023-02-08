@@ -17,7 +17,15 @@ import NewArrivals from './Layouts/NewArrivals';
 import Heading from './Heading';
 import Product from './Product';
 import Badge from './Badge';
+import BestSeller from './Layouts/BestSeller';
+import MiddleAdContainer from './Layouts/MiddleAdContainer';
+import Offers from './Layouts/Offers';
+import Footer from './Layouts/Footer';
 export {
+  Footer,
+  Offers,
+  MiddleAdContainer,
+  BestSeller,
   Badge,
   Product,
   NewArrivals,

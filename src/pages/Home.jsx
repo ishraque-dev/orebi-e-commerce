@@ -5,6 +5,10 @@ import {
   Banner,
   Image,
   Advertise,
+  BestSeller,
+  MiddleAdContainer,
+  Offers,
+  Footer,
 } from '../components';
 
 export default function Home() {
@@ -14,6 +18,10 @@ export default function Home() {
       <HomeService />
       <Advertise />
       <NewArrivals />
+      <BestSeller />
+      <MiddleAdContainer />
+      <Offers />
+      <Footer />
     </div>
   );
 }

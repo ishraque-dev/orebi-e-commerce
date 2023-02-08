@@ -3,10 +3,10 @@ import { icons } from '../assets/constants';
 function Product({ image, badge, badgeSlag }) {
   return (
     <>
-      <div className="group relative overflow-y-hidden">
+      <div className="group relative mr-3 overflow-y-hidden ">
         <div>{badge && <Badge slag={badgeSlag} />}</div>
         <Image src={image} />
-        <div className="h-30 absolute bottom-[-55%] left-0 w-full bg-slate-300 duration-300 ease-in group-hover:bottom-0">
+        <div className="h-30 absolute bottom-[-50%] left-0 hidden w-full bg-slate-300 duration-300 ease-in group-hover:bottom-0 md:block lg:bottom-[-60%]">
           <div className="flex w-full flex-col items-end gap-2 p-3">
             <div className="flex items-center">
               <span className="inline-block p-1 font-dm text-[#767676]">
