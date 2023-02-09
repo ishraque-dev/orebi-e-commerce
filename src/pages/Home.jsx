@@ -10,8 +10,10 @@ import {
   Offers,
   Footer,
 } from '../components';
+import usePageTitle from '../hooks/usePageTitle';
 
 export default function Home() {
+  usePageTitle('Orebi');
   return (
     <div>
       <Banner Image={Image} />
@@ -21,7 +23,6 @@ export default function Home() {
       <BestSeller />
       <MiddleAdContainer />
       <Offers />
-      <Footer />
     </div>
   );
 }

@@ -21,7 +21,11 @@ import BestSeller from './Layouts/BestSeller';
 import MiddleAdContainer from './Layouts/MiddleAdContainer';
 import Offers from './Layouts/Offers';
 import Footer from './Layouts/Footer';
+import Breadcrumb from './Breadcrumb';
+import Pagination from './Layouts/Pagination';
 export {
+  Pagination,
+  Breadcrumb,
   Footer,
   Offers,
   MiddleAdContainer,

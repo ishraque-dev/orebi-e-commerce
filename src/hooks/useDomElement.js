@@ -15,7 +15,6 @@ export default function useDomElement(target) {
   useEffect(() => {
     const handleClick = () => {
       if (target === 'category') {
-        console.log(target);
         controller(setOnTarget, false);
       }
 
