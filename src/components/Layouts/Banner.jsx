@@ -39,7 +39,6 @@ export default function Banner({ Image }) {
               }
             : {
                 width: '30px',
-                color: 'black',
                 borderRight: '2px solid white',
                 padding: '10px 0',
                 color: 'transparent',

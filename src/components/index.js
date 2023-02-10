@@ -23,7 +23,9 @@ import Offers from './Layouts/Offers';
 import Footer from './Layouts/Footer';
 import Breadcrumb from './Breadcrumb';
 import Pagination from './Layouts/Pagination';
+import SelectOption from './SelectOption';
 export {
+  SelectOption,
   Pagination,
   Breadcrumb,
   Footer,

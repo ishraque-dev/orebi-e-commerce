@@ -15,6 +15,7 @@ function HomeService() {
       description: 'Return policy in 30 days',
     },
   ];
+
   return (
     <div className="mt-[-6px] shadow-customShadow">
       <div className="mx-auto max-w-container">

@@ -6,13 +6,13 @@ import ReactPaginate from 'react-paginate';
 const items = [...Array(77).keys()]; //WILL REPLACED with products array
 function Items({ currentItems }) {
   return (
-    <div className="flex flex-wrap">
+    <div className="flex flex-wrap ">
       {currentItems &&
         currentItems.map((item) => (
-          <div className="mb-3 w-[32%] ">
+          <div className="mb-3 w-full sm:w-[25%] md:w-[20%] ">
             <Product
               image={images.product}
-              badge={true}
+              badge={false}
               badgeSlag="New"
               name={item + 1}
             />
@@ -69,7 +69,7 @@ export default function ({ itemsPerPage, setPageDetails }) {
         breakLabel="..."
         breakClassName="page-item"
         breakLinkClassName="page-link"
-        containerClassName="flex gap-x-5 mt-10"
+        containerClassName="flex gap-x-5 mt-10 flex-wrap gap-y-3.5 md:gap-y-"
         activeClassName="bg-black text-white"
         renderOnZeroPageCount={null}
       />

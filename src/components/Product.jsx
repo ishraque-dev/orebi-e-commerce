@@ -6,7 +6,7 @@ function Product({ image, badge, badgeSlag, name }) {
     <>
       <div className="border-2-solid group relative mr-3 animate-slowfade overflow-y-hidden border">
         <div>{badge && <Badge slag={badgeSlag} />}</div>
-        <Image src={image} />
+        <Image src={image} className="w-full" />
         <div className="h-30 absolute bottom-[-50%] left-0 hidden w-full bg-slate-300 duration-300 ease-in group-hover:bottom-0 md:block lg:bottom-[-60%]">
           <div className="flex w-full flex-col items-end gap-2 p-3">
             <div className="flex items-center">
