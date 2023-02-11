@@ -76,7 +76,7 @@ function Header() {
         pathname !== '/journal' && (
           <div className="flex w-full items-center justify-between bg-[#232F3E] py-2 px-5 lg:flex-wrap lg:px-header_padding">
             <div
-              className="toggle flex  items-center gap-3"
+              className="toggle flex  w-[20%] items-center gap-3"
               onClick={() => {
                 setOnTarget(!onTarget);
               }}
@@ -127,14 +127,14 @@ function Header() {
                 )}
               </Dropdown>
             </div>
-            <div className="flex w-auto items-center tablet:w-80 lg:w-96">
+            <div className="flex w-[60%] items-center justify-center tablet:w-80 lg:w-[50%]">
               <Search />
               <div className="relative flex items-center ">
                 {' '}
                 <icons.search className="absolute right-2 rounded-full" />
               </div>
             </div>
-            <div className="toggle relative z-10 flex  gap-5">
+            <div className="toggle relative z-10 flex w-[20%] justify-end gap-5">
               <div
                 className="z-10 flex"
                 onClick={() => {

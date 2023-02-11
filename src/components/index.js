@@ -25,7 +25,9 @@ import Breadcrumb from './Breadcrumb';
 import Pagination from './Layouts/Pagination';
 import SelectOption from './SelectOption';
 import ShopSideBar from './ShopSideBar';
+import AdBox from './Layouts/AdBox';
 export {
+  AdBox,
   ShopSideBar,
   SelectOption,
   Pagination,

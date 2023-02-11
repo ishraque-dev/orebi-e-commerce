@@ -57,7 +57,7 @@ export default function Banner({ Image }) {
     ),
     responsive: [
       {
-        breakpoint: 576,
+        breakpoint: 1100,
         settings: {
           dots: false,
         },
