@@ -17,8 +17,8 @@ export default function Home() {
   return (
     <div>
       <Banner Image={Image} />
-      <HomeService />
       <Advertise />
+      <HomeService />
       <NewArrivals />
       <BestSeller />
       <MiddleAdContainer />

@@ -5,3 +5,7 @@
   margin: 0;
   padding: 0;
 }
+._custom_from_index_css--banner-effect {
+  /* margin-bottom: -100px; */
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 6), rgba(0, 0, 0, 0));
+}

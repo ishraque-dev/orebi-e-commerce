@@ -7,24 +7,18 @@ function Product({ image, badge, badgeSlag, name }) {
       <div className="border-2-solid group relative mr-3 animate-slowfade overflow-y-hidden border">
         <div>{badge && <Badge slag={badgeSlag} />}</div>
         <Image src={image} className="w-full" />
-        <div className="h-30 absolute bottom-[-50%] left-0 hidden w-full bg-slate-300 duration-300 ease-in group-hover:bottom-0 md:block lg:bottom-[-60%]">
-          <div className="flex w-full flex-col items-end gap-2 p-3">
-            <div className="flex items-center">
-              <span className="inline-block p-1 font-dm text-[#767676]">
-                Add to wishlist
-              </span>
+        <div>
+          <h3>Name</h3>
+        </div>
+        <div className="absolute w-full opacity-0 duration-300 ease-in group-hover:opacity-100">
+          <div className="mt-4 flex w-full items-center justify-center gap-4">
+            <div className="">
               <icons.heart />
             </div>
-            <div className="flex items-center">
-              <span className="inline-block p-1 font-dm text-[#767676]">
-                Compare
-              </span>
+            <div className=" ">
               <icons.return />
             </div>
-            <div className="flex items-center">
-              <span className="inline-block p-1 font-dm text-[#767676]">
-                Add to Cart
-              </span>
+            <div className="">
               <icons.cart />
             </div>
           </div>

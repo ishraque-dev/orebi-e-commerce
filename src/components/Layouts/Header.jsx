@@ -74,21 +74,21 @@ function Header() {
       {pathname !== '/about' &&
         pathname !== '/contact' &&
         pathname !== '/journal' && (
-          <div className="flex w-full items-center justify-between bg-[#F5F5F3] py-5 px-5 lg:flex-wrap lg:px-header_padding">
+          <div className="flex w-full items-center justify-between bg-[#232F3E] py-2 px-5 lg:flex-wrap lg:px-header_padding">
             <div
               className="toggle flex  items-center gap-3"
               onClick={() => {
                 setOnTarget(!onTarget);
               }}
             >
-              <icons.catBar className="cursor-pointer " />
+              <icons.catBar className="cursor-pointer text-white " />
               <Dropdown className="dropdown relative z-50 flex flex-col">
-                <p className="hidden cursor-pointer lg:inline-block">
+                <p className="hidden cursor-pointer text-white lg:inline-block">
                   {currentCatItem || 'Shop by Category'}
                 </p>
                 {onTarget && (
                   <motion.div
-                    className="absolute top-7 w-64 rounded-sm bg-primary-black p-2 text-white"
+                    className="absolute top-7 w-64 rounded-md bg-primary-black p-2 text-white"
                     initial="hidden"
                     animate="visible"
                     variants={dropDivAnimVariants}
@@ -136,19 +136,12 @@ function Header() {
             </div>
             <div className="toggle relative z-10 flex  gap-5">
               <div
-                className="flex "
+                className="z-10 flex"
                 onClick={() => {
                   setOnTarget2(!onTarget2);
                 }}
               >
-                <icons.user className="text-lg" />
-                {/* <icons.angleDown /> */}
-                {!onTarget2 ? (
-                  <icons.angleDown className="text-lg" />
-                ) : (
-                  <icons.angleUp className="text-lg" />
-                )}
-                {/* {onTarget2 && <icons.angleUp />} */}
+                <icons.user className="text-lg text-white" />
               </div>
               {onTarget2 && (
                 <motion.div
@@ -156,18 +149,18 @@ function Header() {
                   animate="visible"
                   variants={dropDivAnimVariants}
                 >
-                  <Dropdown className="absolute right-20 top-5 h-24 w-48">
-                    <Button className="w-full bg-primary-black py-3 px-2  text-white">
+                  <Dropdown className="absolute right-20 top-5 h-24 w-48  ">
+                    <Button className="w-full rounded-t-md  bg-primary-black py-3  px-2 text-white">
                       My Account
                     </Button>
-                    <Button className="w-full bg-slate-200 py-3 px-2  text-black">
+                    <Button className="w-full rounded-b-md bg-slate-200 py-3  px-2 text-black">
                       Logout
                     </Button>
                   </Dropdown>
                 </motion.div>
               )}
               <icons.cart
-                className="text-lg"
+                className="text-lg text-white"
                 onClick={() => {
                   setOnTarget3(!onTarget3);
                 }}
@@ -178,22 +171,22 @@ function Header() {
                   animate="visible"
                   variants={dropDivAnimVariants}
                 >
-                  <Dropdown className="absolute top-5 -left-20 w-72">
+                  <Dropdown className="absolute top-5 -left-[11rem] w-72 ">
                     <DropCartItem
                       image={images.headset}
                       icons={icons}
                       Button={Button}
                     />
-                    <div className="bg-[#F0F0F0]">
+                    <div className="rounded-b-md bg-[#F0F0F0]">
                       <div className="py-2">
                         <p className="px-3 text-[#767676]">
                           Subtotal:
                           <strong className="ml-1 text-black">$44.44</strong>
                         </p>
                       </div>
-                      <div className="flex justify-around gap-4 p-3">
+                      <div className="flex justify-around gap-4 p-3 ">
                         <Link to="/cart">
-                          <Button className="w-full bg-slate-200 py-3 px-2  text-black">
+                          <Button className="w-full bg-slate-200 py-3 px-2  text-black ">
                             View Cart
                           </Button>
                         </Link>

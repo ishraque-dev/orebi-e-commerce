@@ -5,6 +5,12 @@ import { images } from '../../assets/constants';
 import { Link } from 'react-router-dom';
 export default function Banner({ Image }) {
   const [activeDot, setActiveDot] = useState(0);
+  const imagArr = [
+    images.banner1,
+    images.banner2,
+    images.banner3,
+    images.banner4,
+  ];
   const settings = {
     autoplay: true,
     dots: true,
@@ -13,6 +19,7 @@ export default function Banner({ Image }) {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplaySpeed: 5000,
     beforeChange: (prev, next) => {
       setActiveDot(next);
     },
@@ -34,8 +41,8 @@ export default function Banner({ Image }) {
           i === activeDot
             ? {
                 width: '30px',
-                color: 'black',
-                borderRight: '2px solid black',
+                color: '#232F3E',
+                borderRight: '2px solid #232F3E',
               }
             : {
                 width: '30px',
@@ -59,15 +66,16 @@ export default function Banner({ Image }) {
   };
   return (
     <Slider {...settings}>
-      {Array(4)
-        .fill()
-        .map((_, i) => {
-          return (
-            <Link to="#">
-              <Image src={images.banner} />
-            </Link>
-          );
-        })}
+      {imagArr.map((image, i) => {
+        return (
+          <Link to="#" className="outline-none">
+            <img
+              src={image}
+              className="_custom_from_index_css--banner-effect"
+            />
+          </Link>
+        );
+      })}
     </Slider>
   );
 }

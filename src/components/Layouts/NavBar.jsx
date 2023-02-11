@@ -9,13 +9,13 @@ const NavBar = ({ logo, Image, navItems }) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="navbar lg:flex md:flex py-7 md:px-5 sm:px-5 mobile:px-5 xs_mobile:px-5 font-dm">
-      <div className="header_logo ">
+    <div className="navbar py-3 font-dm xs_mobile:px-5 mobile:px-5 sm:px-5 md:flex md:px-5 lg:flex">
+      <div className="header_logo flex items-center">
         <Image src={logo} alt="logo" />
       </div>
       {!open ? (
         <icons.bar
-          className="ml-auto lg:hidden md:hidden absolute top-7 right-2.5 cursor-pointer"
+          className="absolute top-7 right-2.5 ml-auto cursor-pointer md:hidden lg:hidden"
           onClick={() => {
             setActiveMenu((pre) => !pre);
             setOpen(true);
@@ -23,7 +23,7 @@ const NavBar = ({ logo, Image, navItems }) => {
         />
       ) : (
         <icons.close
-          className="ml-auto lg:hidden md:hidden absolute top-7 right-2.5 text-xl cursor-pointer"
+          className="absolute top-7 right-2.5 ml-auto cursor-pointer text-xl md:hidden lg:hidden"
           onClick={() => {
             setActiveMenu((pre) => !pre);
             setOpen(false);
@@ -36,7 +36,7 @@ const NavBar = ({ logo, Image, navItems }) => {
             x: [40, 0],
           }}
           transition={{ duration: 0.4, ease: 'easeInOut' }}
-          className="mx-auto flex flex-wrap mt-4 lg:mt-0 md:mt-0"
+          className="mx-auto mt-4 flex flex-wrap md:mt-0 lg:mt-0"
         >
           {navItems.map((navItem) => (
             <NavLink

@@ -24,7 +24,9 @@ import Footer from './Layouts/Footer';
 import Breadcrumb from './Breadcrumb';
 import Pagination from './Layouts/Pagination';
 import SelectOption from './SelectOption';
+import ShopSideBar from './ShopSideBar';
 export {
+  ShopSideBar,
   SelectOption,
   Pagination,
   Breadcrumb,

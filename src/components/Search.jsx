@@ -5,7 +5,7 @@ function Search() {
   return (
     <Input
       input={{ name: 'search', type: 'text', placeholder: 'Search here' }}
-      className="w-full border-none py-2 px-3 outline-none"
+      className="w-full rounded-md border-none py-2 px-3 outline-none"
     />
   );
 }

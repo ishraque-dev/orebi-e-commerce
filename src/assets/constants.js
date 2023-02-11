@@ -15,21 +15,42 @@ import {
   RxTriangleLeft,
   RxTriangleRight,
 } from 'react-icons/rx';
-import headset from '/imgs/headset.png';
-import banner from '/imgs/banner.png';
+import boxShow5 from '/imgs/boxShow5.png';
+import boxShow1 from '/imgs/boxShow1.jpg';
+import boxShow2 from '/imgs/boxShow2.jpg';
+import boxShow3 from '/imgs/boxShow3.jpg';
+import boxShow4 from '/imgs/boxShow4.jpg';
+
+// import banner from '/imgs/banner.png';
 import ad_1 from '/imgs/ad_1.png';
 import ad_2 from '/imgs/ad_2.png';
 import ad_3 from '/imgs/ad_3.png';
 import product from '/imgs/product.png';
 import ads_2 from '/imgs/ads_2.png';
+import banner1 from '/imgs/banner1.jpg';
+import banner2 from '/imgs/banner2.jpg';
+import banner3 from '/imgs/banner3.jpg';
+import banner4 from '/imgs/banner4.jpg';
+import ad4 from '/imgs/ad4.jpg';
+import ad6 from '/imgs/ad6.jpg';
+
 export const images = {
   product,
-  headset,
-  banner,
+  banner1,
+  banner2,
+  banner3,
+  banner4,
+  boxShow5,
+  boxShow1,
+  boxShow2,
+  boxShow3,
+  boxShow4,
+  ad6,
   ad_1,
   ad_2,
   ad_3,
   ads_2,
+  ad4,
 };
 export const icons = {
   heart: AiOutlineHeart,

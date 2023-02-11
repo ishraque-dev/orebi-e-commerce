@@ -38,6 +38,7 @@ module.exports = {
         slideright: 'slideright 1s ease-in-out',
         wave: 'wave 1.2s linear infinite',
         slowfade: 'slowfade 2.2s ease-in-out',
+        blinkingText: 'blinkingText 1.5s linear infinite',
       },
       keyframes: {
         slowfade: {
@@ -64,6 +65,19 @@ module.exports = {
           '0%': { transform: 'scale(0)' },
           '50%': { transform: 'scale(1)' },
           '100%': { transform: 'scale(0)' },
+        },
+        blinkingText: {
+          '0% ': {
+            opacity: 0,
+          },
+
+          ' 50% ': {
+            opacity: 0.7,
+          },
+
+          '100%': {
+            opacity: 0,
+          },
         },
       },
     },
