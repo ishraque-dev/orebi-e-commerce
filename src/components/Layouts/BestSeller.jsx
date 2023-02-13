@@ -5,20 +5,17 @@ function BestSeller() {
     <div className="mx-auto mb-5 mt-10 max-w-container">
       <Heading title="Best Seller" />
 
-      <div className="mt-5 flex">
-        <div className="mx-w-[370px]">
+      <div className="mt-5 flex flex-wrap justify-center gap-2 lg:mt-10">
+        <div className="w-[270px]">
           <Product image={images.product} badge={true} badgeSlag="New" />
         </div>
-        <div className="mx-w-[370px]">
+        <div className="w-[270px]">
           <Product image={images.product} badge={true} badgeSlag="New" />
         </div>
-        <div className="mx-w-[370px]">
+        <div className="w-[270px]">
           <Product image={images.product} badge={true} badgeSlag="New" />
         </div>
-        <div className="mx-w-[370px]">
-          <Product image={images.product} badge={true} badgeSlag="New" />
-        </div>
-        <div className="mx-w-[370px]">
+        <div className="w-[270px]">
           <Product image={images.product} badge={true} badgeSlag="New" />
         </div>
       </div>

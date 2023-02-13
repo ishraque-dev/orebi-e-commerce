@@ -74,7 +74,7 @@ function Header() {
       {pathname !== '/about' &&
         pathname !== '/contact' &&
         pathname !== '/journal' && (
-          <div className="flex w-full items-center justify-between bg-[#232F3E] py-2 px-5 lg:flex-wrap lg:px-header_padding">
+          <div className="flex w-full items-center justify-between  bg-[#232F3E] py-2 px-5 lg:flex-wrap lg:px-header_padding">
             <div
               className="toggle flex  w-[20%] items-center gap-3"
               onClick={() => {
@@ -88,7 +88,7 @@ function Header() {
                 </p>
                 {onTarget && (
                   <motion.div
-                    className="absolute top-7 w-64 rounded-md bg-primary-black p-2 text-white"
+                    className="absolute top-7 w-64 rounded-md  bg-primary-black p-2 text-white"
                     initial="hidden"
                     animate="visible"
                     variants={dropDivAnimVariants}
@@ -106,7 +106,7 @@ function Header() {
                           }  hover:text-white ${
                             item === arr.slice(-1).join('')
                               ? 'border-none'
-                              : 'border-b border-[#2d2d2d]'
+                              : 'border-b border-sky-500'
                           } py-2`}
                           role="button"
                           ariaPressed={i === state.selectIndex}

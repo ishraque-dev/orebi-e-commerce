@@ -13,7 +13,7 @@ module.exports = {
         header_padding: '103px',
       },
       colors: {
-        'primary-black': '#262626',
+        'primary-black': '#232F3E',
       },
       boxShadow: {
         customShadow:

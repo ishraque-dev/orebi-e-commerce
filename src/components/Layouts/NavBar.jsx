@@ -1,28 +1,23 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 import { NavLink, useLocation } from 'react-router-dom';
 import { icons } from '../../assets/constants';
 import { motion } from 'framer-motion';
 import useWindowResize from '../../hooks/useWindowResize';
+import { BackDrop } from '../../components';
 const NavBar = ({ logo, Image, navItems }) => {
   const location = useLocation();
-  const [activeMenu, setActiveMenu] = useWindowResize();
+  const [activeMenu] = useWindowResize();
 
   const [open, setOpen] = useState(false);
   console.log(activeMenu);
   //
-
+  const handleDropClick = () => {
+    setOpen(false);
+  };
   return (
     <>
-      {open && (
-        <div
-          className="absolute z-30 h-screen w-screen backdrop-blur"
-          onClick={() => {
-            setActiveMenu((pre) => !pre);
-            setOpen(false);
-          }}
-        ></div>
-      )}
-      <div className="navbar flex w-[80%] justify-between py-3 font-dm xs_mobile:px-5 mobile:px-5 sm:px-5">
+      <div className="navbar flex w-[80%] justify-between overflow-hidden py-3 font-dm xs_mobile:px-5 mobile:px-5 sm:px-5">
         <div className="flex min-w-[20%] items-center ">
           <Image src={logo} alt="logo" className="" />
         </div>
@@ -45,7 +40,7 @@ const NavBar = ({ logo, Image, navItems }) => {
           <icons.bar
             className="sidebar absolute right-2.5 top-3 ml-auto cursor-pointer md:hidden lg:top-7 lg:hidden"
             onClick={() => {
-              setActiveMenu((pre) => !pre);
+              // setActiveMenu((pre) => !pre);
               setOpen(true);
             }}
           />
@@ -53,7 +48,7 @@ const NavBar = ({ logo, Image, navItems }) => {
           <icons.close
             className="absolute top-3 right-2.5  z-50 ml-auto cursor-pointer text-xl md:hidden lg:hidden"
             onClick={() => {
-              setActiveMenu((pre) => !pre);
+              // setActiveMenu((pre) => !pre);
               setOpen(false);
             }}
           />
@@ -64,7 +59,7 @@ const NavBar = ({ logo, Image, navItems }) => {
               x: [40, 0],
             }}
             transition={{ duration: 0.4, ease: 'easeInOut' }}
-            className="sidebar absolute right-0 top-10 z-50 h-[50%] w-1/2 rounded-md bg-[#232F3E] "
+            className="sidebar absolute right-0 top-10 z-50 h-full w-1/2 rounded-l-md bg-[#232F3E]"
           >
             {navItems.map((navItem) => (
               <NavLink
@@ -77,7 +72,7 @@ const NavBar = ({ logo, Image, navItems }) => {
                 <div
                   className="ml-3 text-white"
                   onClick={() => {
-                    setActiveMenu((pre) => !pre);
+                    // setActiveMenu((pre) => !pre);
                     setOpen(false);
                   }}
                 >
@@ -88,6 +83,10 @@ const NavBar = ({ logo, Image, navItems }) => {
           </motion.div>
         )}
       </div>
+      {ReactDOM.createPortal(
+        <BackDrop onClick={handleDropClick} open={open} />,
+        document.getElementById('back-drop-root')
+      )}
     </>
   );
 };

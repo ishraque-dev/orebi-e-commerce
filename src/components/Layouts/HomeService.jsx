@@ -17,14 +17,14 @@ function HomeService() {
   ];
 
   return (
-    <div className="mb-5 bg-[#232F3E] shadow-customShadow lg:mb-10">
+    <div className="mb-10 mt-10  bg-[#232F3E] shadow-customShadow md:mt-20 lg:mb-20">
       <div className="mx-auto max-w-container">
         <div className="flex justify-between py-2 px-3 lg:py-2">
           {content.map((contentItem) => {
             return (
               <div className="flex flex-col items-center justify-center gap-2 lg:flex-row ">
                 <contentItem.icon className="text-[12px] text-white lg:text-xl" />
-                <p className="px-2 text-[12px] text-white lg:text-xl">
+                <p className="text-[12px] text-white lg:px-2 lg:text-xl">
                   {' '}
                   {contentItem.description}
                 </p>

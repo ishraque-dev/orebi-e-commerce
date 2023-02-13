@@ -20,23 +20,22 @@ function NewArrivals() {
   return (
     <div className="mx-auto max-w-container ">
       <Heading title="New Arrivals" />
-      <Slider {...settings}>
-        <div className="mx-w-[370px] h-[300px]">
-          {null || <Skeleton className="h-full" />}
-        </div>
-        <div className="mx-w-[370px]">
+      <div className="mt-5">
+        <Slider {...settings}>
+          {/* <div>{null || <Skeleton className="h-full" />}</div> */}
           <Product image={images.product} badge={true} badgeSlag="New" />
-        </div>
-        <div className="mx-w-[370px]">
+          <div>
+            <Product image={images.product} badge={true} badgeSlag="New" />
+          </div>
+          <div>
+            <Product image={images.product} badge={true} badgeSlag="New" />
+          </div>
           <Product image={images.product} badge={true} badgeSlag="New" />
-        </div>
-        <div className="mx-w-[370px] h-[300px]">
-          {null || <Skeleton className="h-full" />}
-        </div>
-        <div className="mx-w-[370px]">
-          <Product image={images.product} badge={true} badgeSlag="New" />
-        </div>
-      </Slider>
+          <div>
+            <Product image={images.product} badge={true} badgeSlag="New" />
+          </div>
+        </Slider>
+      </div>
     </div>
   );
 }

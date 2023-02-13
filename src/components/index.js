@@ -1,32 +1,34 @@
 import Header from './Layouts/Header';
-import Image from './Layouts/Image';
+import Image from './UI/Image';
 import NavBar from './Layouts/NavBar';
 import RootLayout from './Layouts/RootLayout';
-import MainNavigation from './MainNavigation';
-import Dropdown from './Dropdown';
-import MotionUL from './MotionUL';
-import MotionLI from './MotionLI';
-import Search from './Search';
-import Input from './Input';
-import Button from './Button';
-import DropCartItem from './DropCartItem';
+import MainNavigation from './UI/MainNavigation';
+import Dropdown from './UI/Dropdown';
+import MotionUL from './UI/MotionUL';
+import MotionLI from './UI/MotionLI';
+import Search from './UI/Search';
+import Input from './UI/Input';
+import Button from './UI/Button';
+import DropCartItem from './UI/DropCartItem';
 import Banner from './Layouts/Banner';
 import HomeService from './Layouts/HomeService';
 import Advertise from './Layouts/Advertise';
 import NewArrivals from './Layouts/NewArrivals';
-import Heading from './Heading';
-import Product from './Product';
-import Badge from './Badge';
+import Heading from './UI/Heading';
+import Product from './UI/Product';
+import Badge from './UI/Badge';
 import BestSeller from './Layouts/BestSeller';
 import MiddleAdContainer from './Layouts/MiddleAdContainer';
 import Offers from './Layouts/Offers';
 import Footer from './Layouts/Footer';
-import Breadcrumb from './Breadcrumb';
+import Breadcrumb from './UI/Breadcrumb';
 import Pagination from './Layouts/Pagination';
-import SelectOption from './SelectOption';
-import ShopSideBar from './ShopSideBar';
+import SelectOption from './UI/SelectOption';
+import ShopSideBar from './UI/ShopSideBar';
 import AdBox from './Layouts/AdBox';
+import BackDrop from './UI/BackDrop';
 export {
+  BackDrop,
   AdBox,
   ShopSideBar,
   SelectOption,

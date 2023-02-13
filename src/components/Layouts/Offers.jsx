@@ -6,20 +6,20 @@ function Offers() {
     <div className="mx-auto mb-5 mt-10 max-w-container">
       <Heading title="Special Offers" />
 
-      <div className="mt-5 flex">
-        <div className="mx-w-[370px]">
+      <div className="mt-5 flex flex-wrap justify-center gap-2">
+        <div className="w-[300px]">
           <Product image={images.product} badge={true} badgeSlag="New" />
         </div>
-        <div className="mx-w-[370px]">
+        <div className="w-[300px]">
           <Product image={images.product} badge={true} badgeSlag="New" />
         </div>
-        <div className="mx-w-[370px]">
+        <div className="w-[300px]">
           <Product image={images.product} badge={true} badgeSlag="New" />
         </div>
-        <div className="mx-w-[370px]">
+        <div className="w-[300px]">
           <Product image={images.product} badge={true} badgeSlag="New" />
         </div>
-        <div className="mx-w-[370px]">
+        <div className="w-[300px]">
           <Product image={images.product} badge={true} badgeSlag="New" />
         </div>
       </div>

@@ -6,7 +6,7 @@ export default function MiddleAdContainer() {
     <div className="my-10">
       <div className="mx-auto max-w-container">
         <Link>
-          <Image src={images.ads_2} />
+          <Image src={images.fr_ad} className="h-full w-full object-contain" />
         </Link>
       </div>
     </div>

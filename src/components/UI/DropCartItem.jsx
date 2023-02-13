@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image } from './index';
+import { Image } from '../index';
 
 export default function DropCartItem({ image, icons, Button }) {
   return (

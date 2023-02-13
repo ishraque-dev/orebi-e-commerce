@@ -31,10 +31,21 @@ import banner1 from '/imgs/banner1.jpg';
 import banner2 from '/imgs/banner2.jpg';
 import banner3 from '/imgs/banner3.jpg';
 import banner4 from '/imgs/banner4.jpg';
+import comWithTab from '/imgs/comWithTab.jpg';
 import ad4 from '/imgs/ad4.jpg';
 import ad6 from '/imgs/ad6.jpg';
 
+import compTable from '/imgs/comTable.jpg';
+import fr_ad from '/imgs/fresh.gif';
+
+import electronic from '/imgs/electronic.jpg';
+import under99 from '/imgs/under99.jpg';
 export const images = {
+  under99,
+  comWithTab,
+  compTable,
+  electronic,
+  fr_ad,
   product,
   banner1,
   banner2,

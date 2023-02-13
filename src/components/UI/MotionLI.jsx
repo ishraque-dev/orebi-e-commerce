@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 
 import { motion } from 'framer-motion';
-import { dropdownLiAnimVariant } from '../assets/constants';
+import { dropdownLiAnimVariant } from '../../assets/constants';
 
 function MotionLI({
   children,
