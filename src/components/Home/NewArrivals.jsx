@@ -1,4 +1,4 @@
-import { Heading, Product } from '../index';
+import { Heading, Product } from '../UI';
 import { images } from '../../assets/constants';
 import Slider from 'react-slick';
 import { SampleNextArrow, SamplePrevArrow } from '../../utils/slick-slider';

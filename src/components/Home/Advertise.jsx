@@ -1,4 +1,5 @@
-import { Image, AdBox } from '../../components';
+import { Image } from '../UI';
+import { AdBox } from './index';
 import { images } from '../../assets/constants';
 import { Link } from 'react-router-dom';
 

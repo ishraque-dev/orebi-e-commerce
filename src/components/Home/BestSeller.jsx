@@ -1,4 +1,4 @@
-import { Heading, Product } from '../index';
+import { Heading, Product } from '../UI';
 import { images } from '../../assets/constants';
 function BestSeller() {
   return (

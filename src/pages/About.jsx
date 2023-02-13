@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Breadcrumb } from '../components';
+import { Heading, Breadcrumb } from '../components/UI';
 import usePageTitle from '../hooks/usePageTitle';
 
 function About() {

@@ -1,7 +1,7 @@
 import { React, useEffect, useState } from 'react';
 
 import { images } from '../../assets/constants';
-import { Product } from '../../components';
+import { Product } from '../UI';
 import ReactPaginate from 'react-paginate';
 const items = [...Array(77).keys()]; //WILL REPLACED with products array
 function Items({ currentItems }) {

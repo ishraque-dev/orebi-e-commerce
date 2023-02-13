@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { SelectOption, Heading, Breadcrumb, Pagination } from '../components';
+import { SelectOption, Heading, Breadcrumb } from '../components/UI';
+import { Pagination, ShopSideBar } from '../components/Shop';
 import usePageTitle from '../hooks/usePageTitle';
 
 function Shop() {
@@ -21,9 +22,7 @@ function Shop() {
       <Heading title="Products" />
       <Breadcrumb />
       <div className="flex lg:gap-x-20 ">
-        <div className="w-[25%] bg-red-500">
-          
-        </div>
+        <div className="w-[25%] bg-red-500"></div>
         <div className="relative w-[75%]  ">
           <div className="flex w-full items-center justify-end gap-3 lg:mb-5">
             <small className="fon-dm font-medium text-[#767676]">

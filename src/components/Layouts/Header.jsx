@@ -13,7 +13,6 @@ import {
 } from '../../assets/constants';
 // eslint-disable-next-line import/no-cycle
 import {
-  NavBar,
   Image,
   Dropdown,
   MotionUL,
@@ -21,8 +20,8 @@ import {
   Search,
   Button,
   DropCartItem,
-} from '../index.js';
-
+} from '../UI';
+import { NavBar } from '../Layouts';
 import useDomElement from '../../hooks/useDomElement';
 import useKeyPress from '../../hooks/useKeyPress';
 import keyPressReducer from '../../store/keyPressReducer';

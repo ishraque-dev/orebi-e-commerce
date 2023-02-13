@@ -3,13 +3,12 @@ import {
   NewArrivals,
   HomeService,
   Banner,
-  Image,
   Advertise,
   BestSeller,
   MiddleAdContainer,
   Offers,
-  Footer,
-} from '../components';
+} from '../components/Home';
+import { Image } from '../components/UI';
 import usePageTitle from '../hooks/usePageTitle';
 
 export default function Home() {

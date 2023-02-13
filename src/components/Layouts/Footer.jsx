@@ -1,6 +1,6 @@
 import React from 'react';
 import { help, category, links } from '../../assets/constants';
-import { Image } from '../../components';
+import { Image } from '../UI';
 import { logo } from '../../assets';
 function Footer() {
   return (

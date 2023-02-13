@@ -4,7 +4,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { icons } from '../../assets/constants';
 import { motion } from 'framer-motion';
 import useWindowResize from '../../hooks/useWindowResize';
-import { BackDrop } from '../../components';
+import { BackDrop } from '../UI';
 const NavBar = ({ logo, Image, navItems }) => {
   const location = useLocation();
   const [activeMenu] = useWindowResize();

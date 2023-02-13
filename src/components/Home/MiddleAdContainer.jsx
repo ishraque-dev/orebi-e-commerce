@@ -1,4 +1,4 @@
-import { Image } from '../../components';
+import { Image } from '../UI';
 import { images } from '../../assets/constants';
 import { Link } from 'react-router-dom';
 export default function MiddleAdContainer() {

@@ -1,4 +1,4 @@
-import { Badge, Image } from '..';
+import { Badge, Image } from './';
 import { icons } from '../../assets/constants';
 
 function Product({ image, badge, badgeSlag, name }) {
