@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { icons } from '../../assets/constants';
+import { icons } from '../../../assets/constants';
 import SubCategory from './SubCategory';
-function CatItem({ subCategory }) {
+function CatItem({ subCategory, item }) {
   const [show, setShow] = useState(false);
   return (
     <>
@@ -12,10 +12,10 @@ function CatItem({ subCategory }) {
           }}
         >
           <div className="flex items-center justify-between">
-            <h4>Im a Item with a sub category</h4>
+            <h4>{item.name}</h4>
             <icons.plus />
           </div>
-          {show && <SubCategory item="Im a sub category item" />}
+          {show && item.subCategory.map((item) => <SubCategory item={item} />)}
         </div>
       ) : (
         <div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { icons } from '../../assets/constants';
+import { icons } from '../../../assets/constants';
 import CatItem from './CatItem';
 function ShopLeftSideContent({
   dropdown,
@@ -38,8 +38,11 @@ function ShopLeftSideContent({
           </div>
           <div className="bg-blue-500">
             {categoryItems &&
-              [...Array(categoryItems).keys()].map((item) => (
-                <CatItem subCategory={item % 2 === 0 ? true : false} />
+              categoryItems.map((item) => (
+                <CatItem
+                  subCategory={item.subCategory ? true : false}
+                  item={item}
+                />
               ))}
             {brandItems &&
               [...Array(brandItems).keys()].map((item) => (
