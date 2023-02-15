@@ -8,7 +8,8 @@ import {
 
 import { RiBarChartHorizontalLine, RiNumber2 } from 'react-icons/ri';
 import { FiSearch, FiTruck, FiRefreshCcw } from 'react-icons/fi';
-import { BiUser } from 'react-icons/bi';
+import { BiUser, } from 'react-icons/bi';
+import {HiPlusSm} from 'react-icons/hi'
 import {
   RxTriangleDown,
   RxTriangleUp,
@@ -64,6 +65,7 @@ export const images = {
   ad4,
 };
 export const icons = {
+  plus:HiPlusSm,
   heart: AiOutlineHeart,
   bar: FaBars,
   catBar: RiBarChartHorizontalLine,
