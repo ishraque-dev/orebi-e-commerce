@@ -5,7 +5,7 @@ import { logo } from '../../assets';
 function Footer() {
   return (
     <div className="mx-auto mb-10 mt-20 max-w-container lg:mt-[200px]">
-      <div className="flex flex-wrap justify-center">
+      <div className="flex flex-wrap justify-between">
         <div className="w-[150px] md:w-[200px]">
           <h3 className="mb-5 font-dm text-xl font-bold lg:mb-10">Menu</h3>
           <ul>
@@ -36,17 +36,21 @@ function Footer() {
             ))}
           </ul>
         </div>
-        <div className=" mt-5 w-[150px] md:mt-0 md:w-[200px] ">
-          <h3 className=" mb-5 font-dm text-xl font-bold lg:mb-10">Contact</h3>
-          <h4 className=" mb-10 font-dm text-sm font-medium  text-[#6D6D6D] ">
-            (052) 611-5711 company@domain.com
-          </h4>
-        </div>
-        <div className="mt-5 flex flex-col items-center justify-end">
+
+        <div className="mt-5 flex flex-col items-center justify-between">
           <div>
-            <Image src={logo} className="mb-3" />
+            <h3 className=" mb-5 font-dm text-xl font-bold lg:mb-10">
+              Contact
+            </h3>
+            <h4 className=" mb-10 font-dm text-sm font-medium  text-[#6D6D6D] ">
+              (052) 611-5711 company@domain.com
+            </h4>
           </div>
+
           <div>
+            <div>
+              <Image src={logo} className="mb-3" />
+            </div>
             <p className="text-sm text-[#6D6D6D]">
               2020 Orebi Minimal eCommerce Figma
             </p>

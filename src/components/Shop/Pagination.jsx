@@ -6,10 +6,10 @@ import ReactPaginate from 'react-paginate';
 const items = [...Array(77).keys()]; //WILL REPLACED with products array
 function Items({ currentItems }) {
   return (
-    <div className="flex flex-wrap ">
+    <div className="flex flex-wrap items-center justify-center">
       {currentItems &&
         currentItems.map((item) => (
-          <div className="mb-3 w-full sm:w-[25%] md:w-[20%] ">
+          <div className="mb-3 min-w-[200px] md:w-[250px] ">
             <Product
               image={images.product}
               badge={false}
@@ -69,7 +69,7 @@ export default function ({ itemsPerPage, setPageDetails }) {
         breakLabel="..."
         breakClassName="page-item"
         breakLinkClassName="page-link"
-        containerClassName="flex gap-x-5 mt-10 flex-wrap gap-y-3.5 md:gap-y-"
+        containerClassName="flex gap-x-5 mt-10 flex-wrap gap-y-3.5 ml-10 "
         activeClassName="bg-black text-white"
         renderOnZeroPageCount={null}
       />

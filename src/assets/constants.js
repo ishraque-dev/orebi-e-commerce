@@ -1,4 +1,4 @@
-import { FaBars } from 'react-icons/fa';
+import { FaBars, FaSlidersH } from 'react-icons/fa';
 import {
   AiOutlineCloseCircle,
   AiOutlineShoppingCart,
@@ -65,6 +65,7 @@ export const images = {
   ad4,
 };
 export const icons = {
+  slide:FaSlidersH,
   plus:HiPlusSm,
   heart: AiOutlineHeart,
   bar: FaBars,

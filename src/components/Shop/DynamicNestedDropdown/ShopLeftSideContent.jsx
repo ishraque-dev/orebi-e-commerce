@@ -6,10 +6,12 @@ function ShopLeftSideContent({
   className,
   categoryItems,
   colorItems,
-  brandItems,
+  priceRange,
   subCategory,
+  brandItems,
+  title,
 }) {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
 
   return (
     <div className={className}>
@@ -19,24 +21,58 @@ function ShopLeftSideContent({
             className="flex items-center justify-between"
             onClick={() => setShow(!show)}
           >
-            <h3>Shop by Dropdown</h3>
-            {!show ? <icons.angleDown /> : <icons.angleUp />}
+            {colorItems && (
+              <h3 className="font-dm text-sm font-medium md:text-xl">
+                By Colors
+              </h3>
+            )}
+            {brandItems && (
+              <h3 className="font-dm text-sm font-medium md:text-xl">
+                By Brands
+              </h3>
+            )}
+            {!show ? (
+              <icons.angleDown className="text-[#767676]" />
+            ) : (
+              <icons.angleUp />
+            )}
           </div>
 
           {show && (
             <div>
-              {[...Array(colorItems).keys()].map((item) => (
-                <CatItem subCategory={false} dropdown={dropdown} />
-              ))}
+              {colorItems &&
+                colorItems.map((item) => (
+                  <CatItem
+                    subCategory={false}
+                    dropdown={dropdown}
+                    item={item}
+                  />
+                ))}
+              {brandItems &&
+                brandItems.map((item) => (
+                  <CatItem
+                    subCategory={false}
+                    dropdown={dropdown}
+                    item={item}
+                  />
+                ))}
             </div>
           )}
         </div>
       ) : (
         <div>
-          <div className="flex items-center justify-between">
-            <h3>I don't have any dropdown </h3>
+          <div className="flex items-center justify-between ">
+            {categoryItems ? (
+              <h3 className="font-dm text-sm font-medium md:text-xl">
+                By Category{' '}
+              </h3>
+            ) : (
+              <h3 className="font-dm text-sm font-medium md:text-xl">
+                By Price{' '}
+              </h3>
+            )}
           </div>
-          <div className="bg-blue-500">
+          <div className="">
             {categoryItems &&
               categoryItems.map((item) => (
                 <CatItem
@@ -44,9 +80,9 @@ function ShopLeftSideContent({
                   item={item}
                 />
               ))}
-            {brandItems &&
-              [...Array(brandItems).keys()].map((item) => (
-                <CatItem subCategory={subCategory} />
+            {priceRange &&
+              priceRange.map((item) => (
+                <CatItem subCategory={subCategory} item={item} />
               ))}
           </div>
         </div>
