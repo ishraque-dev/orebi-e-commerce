@@ -7,19 +7,23 @@ function CatItem({ subCategory, item }) {
     <>
       {subCategory ? (
         <div
-          className="border-b border-solid"
+          className="cursor-pointer border-b border-solid "
           onClick={() => {
             setShow(!show);
           }}
         >
-          <div className="flex items-center justify-between p-3">
+          <div className="flex  items-center justify-between p-3">
             <h4 className="font-dm text-[#767676]">{item.name}</h4>
-            <icons.plus className="text-[#767676]" />
+            {!show ? (
+              <icons.plus className="text-[#767676]" />
+            ) : (
+              <icons.minus className="text-[#767676]" />
+            )}
           </div>
           {show && item.subCategory.map((item) => <SubCategory item={item} />)}
         </div>
       ) : (
-        <div className="border-b border-solid p-3">
+        <div className="cursor-pointer border-b border-solid p-3">
           {item.type === 'color' ? (
             <div className="flex items-center">
               <div

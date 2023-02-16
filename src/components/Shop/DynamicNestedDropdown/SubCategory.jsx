@@ -1,7 +1,11 @@
 import React from 'react';
 
 function SubCategory({ item }) {
-  return <div>{item.name}</div>;
+  return (
+    <div className="">
+      <small>{item.name}</small>
+    </div>
+  );
 }
 
 export default SubCategory;

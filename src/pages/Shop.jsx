@@ -33,7 +33,7 @@ function Shop() {
               !activeMenu ? 'w-[25%]' : 'w-4'
             }px-3`}
           >
-            <div className="mx-3 block md:hidden">
+            <div className="mx-3 block cursor-pointer rounded-full  p-1 duration-300 ease-in-out hover:bg-gray-200 md:hidden">
               <icons.slide onClick={() => setActiveMenu(!activeMenu)} />
             </div>
             {activeMenu && <ShopSideBar />}
