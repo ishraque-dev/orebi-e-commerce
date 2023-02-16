@@ -12,7 +12,9 @@ import MotionUL from './MotionUL';
 import Product from './Product';
 import Search from './Search';
 import SelectOption from './SelectOption';
+import BackToTop from './BackToTop';
 export {
+  BackToTop,
   BackDrop,
   Badge,
   Breadcrumb,

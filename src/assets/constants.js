@@ -5,7 +5,7 @@ import {
   AiOutlineClose,
   AiOutlineHeart,
 } from 'react-icons/ai';
-
+import {BsFillArrowUpCircleFill} from 'react-icons/bs'
 import { RiBarChartHorizontalLine, RiNumber2 } from 'react-icons/ri';
 import { FiSearch, FiTruck, FiRefreshCcw } from 'react-icons/fi';
 import { BiUser, } from 'react-icons/bi';
@@ -65,6 +65,7 @@ export const images = {
   ad4,
 };
 export const icons = {
+  arrowUp:BsFillArrowUpCircleFill,
   minus:HiMinus,
   slide:FaSlidersH,
   plus:HiPlusSm,

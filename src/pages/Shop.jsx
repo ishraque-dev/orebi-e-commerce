@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
-import { SelectOption, Heading, Breadcrumb } from '../components/UI';
+import React, { useState, useRef, useEffect } from 'react';
+import { SelectOption, Heading, Breadcrumb, BackToTop } from '../components/UI';
 import { icons } from '../assets/constants';
 import { Pagination, ShopSideBar } from '../components/Shop';
 import usePageTitle from '../hooks/usePageTitle';
 import useWindowResize from '../hooks/useWindowResize';
+
+import useScrollTop from '../hooks/useScrollTop';
 function Shop() {
   const [activeMenu, setActiveMenu] = useWindowResize();
-  console.log(activeMenu);
+  const divRef = useRef(null);
   usePageTitle('Products');
   const [pageDetails, setPageDetails] = useState();
   const [showItemsPerPage, setShowItemsPerPage] = useState(12);
@@ -20,9 +22,12 @@ function Shop() {
   const handleItemsPerPage = function (e) {
     setShowItemsPerPage(e.target.value * 1);
   };
+  const [showBtn] = useScrollTop(divRef);
+
   return (
     <>
-      <div className="mx-auto my-16 max-w-container">
+      {showBtn && <BackToTop ref={divRef} />}
+      <div className="mx-auto my-16 max-w-container" ref={divRef}>
         <div className="">
           <Heading title="Products" />
           {/* {activeMenu && <Breadcrumb className="mt-3" />} */}
@@ -31,7 +36,7 @@ function Shop() {
           <div
             className={`z-10 mt-4 flex flex-col items-start  justify-start  ${
               !activeMenu ? 'w-[25%]' : 'w-4'
-            }px-3`}
+            }px-3 h-[50%]`}
           >
             <div className="mx-3 block cursor-pointer rounded-full  p-1 duration-300 ease-in-out hover:bg-gray-200 md:hidden">
               <icons.slide onClick={() => setActiveMenu(!activeMenu)} />
