@@ -1,7 +1,9 @@
 import React from 'react';
 
-const Input = ({ input, onChange, className }) => {
-  return <input {...input} className={className} />;
+const Input = ({ input, onFocus, className,onBlur }) => {
+  return (
+    <input {...input} className={className} onFocus={onFocus} onBlur={onBlur} />
+  );
 };
 
 export default Input;

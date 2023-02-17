@@ -3,28 +3,6 @@ import Marquee from 'react-fast-marquee';
 function AdBox({ images, Image }) {
   return (
     <div className="flex w-[45%] flex-wrap items-start justify-center   ">
-      <div className="hidden w-[81%] justify-between bg-[#FEBD69] p-2 md:flex">
-        <div>
-          <h3 className="font-regular  inline-block animate-blinkingText font-dm text-base text-black lg:text-xl">
-            Todays Hot Deals
-          </h3>
-        </div>
-        <Marquee
-          gradient={false}
-          style={{
-            width: '50%',
-          }}
-          speed={60}
-          direction="left"
-        >
-          <span style={{ marginRight: '10px' }}>
-            Limited period offers on every products.
-          </span>
-          <span style={{ marginRight: '10px' }}>
-            Get discount and gifts offers now. Harry up!
-          </span>
-        </Marquee>
-      </div>
       <div className="top  flex w-full items-center justify-center gap-1 md:gap-2  ">
         <div className="group relative h-full w-[40%]">
           <Image
@@ -55,10 +33,17 @@ function AdBox({ images, Image }) {
           </div>
         </div>
       </div>
-      <div className=" md:-mt- flex w-full items-center justify-center gap-1 md:gap-2 lg:-mt-6"></div>
+      <div className="mt-2 flex w-full items-center justify-center gap-1 md:gap-2 lg:mt-2"></div>
       <div className=" flex justify-center ">
-        <div className="flex h-full w-full justify-center">
-          <Image src={images.ad4} className="h-full w-[81%] object-contain " />
+        <div className="flex h-full w-full flex-col items-center justify-center">
+          <Image
+            src={images.ad4}
+            className="mb-2 h-full w-[81%] object-contain"
+          />
+          <Image
+            src={images.under99}
+            className="h-full w-[81%] object-contain "
+          />
         </div>
       </div>
     </div>

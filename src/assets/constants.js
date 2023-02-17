@@ -5,10 +5,10 @@ import {
   AiOutlineClose,
   AiOutlineHeart,
 } from 'react-icons/ai';
-import {BsFillArrowUpCircleFill} from 'react-icons/bs'
+import { BsFillArrowUpCircleFill } from 'react-icons/bs';
 import { RiBarChartHorizontalLine, RiNumber2 } from 'react-icons/ri';
 import { FiSearch, FiTruck, FiRefreshCcw } from 'react-icons/fi';
-import { BiUser, } from 'react-icons/bi';
+import { BiUser } from 'react-icons/bi';
 import { HiPlusSm, HiMinus } from 'react-icons/hi';
 import {
   RxTriangleDown,
@@ -65,10 +65,10 @@ export const images = {
   ad4,
 };
 export const icons = {
-  arrowUp:BsFillArrowUpCircleFill,
-  minus:HiMinus,
-  slide:FaSlidersH,
-  plus:HiPlusSm,
+  arrowUp: BsFillArrowUpCircleFill,
+  minus: HiMinus,
+  slide: FaSlidersH,
+  plus: HiPlusSm,
   heart: AiOutlineHeart,
   bar: FaBars,
   catBar: RiBarChartHorizontalLine,

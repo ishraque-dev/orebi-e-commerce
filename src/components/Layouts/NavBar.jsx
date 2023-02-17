@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { NavLink, useLocation } from 'react-router-dom';
 import { icons } from '../../assets/constants';
@@ -10,8 +10,16 @@ const NavBar = ({ logo, Image, navItems }) => {
   const [activeMenu] = useWindowResize();
 
   const [open, setOpen] = useState(false);
-  console.log(activeMenu);
-  //
+  //Prevent scrolling when the menu is opened
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [open]);
+
   const handleDropClick = () => {
     setOpen(false);
   };

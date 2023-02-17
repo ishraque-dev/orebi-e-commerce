@@ -25,6 +25,8 @@ import { NavBar } from '../Layouts';
 import useDomElement from '../../hooks/useDomElement';
 import useKeyPress from '../../hooks/useKeyPress';
 import keyPressReducer from '../../store/keyPressReducer';
+import useWindowResize from '../../hooks/useWindowResize';
+import useMobileSize from '../../hooks/useMobileSize';
 
 function Header() {
   let { pathname } = useLocation();
@@ -33,11 +35,13 @@ function Header() {
   const [onTarget, setOnTarget] = useDomElement('category');
   const [onTarget2, setOnTarget2] = useDomElement('user');
   const [onTarget3, setOnTarget3] = useDomElement('cart');
+  const [focus, setFocus] = useState(false);
   const arrowUpPressed = useKeyPress('ArrowUp');
   const arrowDownPressed = useKeyPress('ArrowDown');
+  const [xsMobile, setXsMobile] = useMobileSize();
   const initialState = { selectIndex: 0 };
   const [state, dispatch] = useReducer(keyPressReducer, initialState);
-
+  // For keyboard accessibility on dropdown
   useEffect(() => {
     if (arrowUpPressed) {
       dispatch({ type: 'arrowUp' });
@@ -49,8 +53,7 @@ function Header() {
     }
   }, [arrowDownPressed]);
 
-  // This will be replaced
-  // const inputReference = useRef(null);
+  // For hiding the dropdowns
   useEffect(() => {
     if (onTarget) {
       setOnTarget2(false);
@@ -65,6 +68,14 @@ function Header() {
       setOnTarget2(false);
     }
   }, [onTarget, onTarget2, onTarget3]);
+  const onFocus = () => {
+    setFocus(true);
+  };
+  const onBlur = () => {
+    setFocus(false);
+  };
+  console.log(xsMobile);
+
   return (
     <div className="font-dm ">
       <div className="mx-auto max-w-container">
@@ -75,7 +86,9 @@ function Header() {
         pathname !== '/journal' && (
           <div className="flex w-full items-center justify-between  bg-[#232F3E] py-2 px-5 lg:flex-wrap lg:px-header_padding">
             <div
-              className="toggle flex  w-[20%] items-center gap-3"
+              className={`toggle ${
+                focus && !xsMobile ? 'hidden' : 'flex'
+              } w-[10%] items-center gap-3 md:w-[20%]`}
               onClick={() => {
                 setOnTarget(!onTarget);
               }}
@@ -126,21 +139,27 @@ function Header() {
                 )}
               </Dropdown>
             </div>
-            <div className="flex w-[60%] items-center justify-center tablet:w-80 lg:w-[50%]">
-              <Search />
+
+            <div className="flex w-[100%] items-center justify-center  lg:w-[50%]">
+              <Search onFocus={onFocus} onBlur={onBlur} />
               <div className="relative flex items-center ">
                 {' '}
                 <icons.search className="absolute right-2 rounded-full" />
               </div>
             </div>
-            <div className="toggle relative z-10 flex w-[20%] justify-end gap-5">
+            {/*   */}
+            <div
+              className={`toggle relative z-10 ${
+                focus && !xsMobile ? 'hidden' : 'flex'
+              } w-[20%] justify-end gap-3`}
+            >
               <div
                 className="z-10 flex"
                 onClick={() => {
                   setOnTarget2(!onTarget2);
                 }}
               >
-                <icons.user className="text-lg text-white" />
+                <icons.user className="ml-1 text-lg text-white" />
               </div>
               {onTarget2 && (
                 <motion.div
