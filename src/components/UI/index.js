@@ -13,7 +13,9 @@ import Product from './Product';
 import Search from './Search';
 import SelectOption from './SelectOption';
 import BackToTop from './BackToTop';
+import CommonInput from './CommonInput';
 export {
+  CommonInput,
   BackToTop,
   BackDrop,
   Badge,

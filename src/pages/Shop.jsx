@@ -27,10 +27,13 @@ function Shop() {
   return (
     <>
       {showBtn && <BackToTop ref={divRef} />}
-      <div className="mx-auto my-16 max-w-container" ref={divRef}>
+      <div className="mx-auto my-16 max-w-container p-2" ref={divRef}>
         <div className="">
           <Heading title="Products" />
           {/* {activeMenu && <Breadcrumb className="mt-3" />} */}
+        </div>
+        <div className="mt-3 block w-6 cursor-pointer rounded-full  p-1 duration-300 ease-in-out hover:bg-gray-200 md:hidden">
+          <icons.slide onClick={() => setActiveMenu(!activeMenu)} />
         </div>
         <div className="flex justify-between gap-x-2 lg:gap-x-20  ">
           <div
@@ -38,9 +41,6 @@ function Shop() {
               !activeMenu ? 'w-[25%]' : 'w-4'
             }px-3 h-[50%]`}
           >
-            <div className="mx-3 block cursor-pointer rounded-full  p-1 duration-300 ease-in-out hover:bg-gray-200 md:hidden">
-              <icons.slide onClick={() => setActiveMenu(!activeMenu)} />
-            </div>
             {activeMenu && <ShopSideBar />}
           </div>
           <div className="relative mt-4 w-[100%] md:mt-1 md:w-[75%] ">
